@@ -8,3 +8,13 @@ C:\Users\Luis\source\repos\Ex_Campeonato\Ex_Campeonato\bin\Debug\Ex_Campeonato.e
 C:\Users\Luis\source\repos\Ex_Campeonato\Ex_Campeonato\bin\Debug\Ex_Campeonato.pdb
 C:\Users\Luis\source\repos\Ex_Campeonato\Ex_Campeonato\obj\Debug\Ex_Campeonato.exe
 C:\Users\Luis\source\repos\Ex_Campeonato\Ex_Campeonato\obj\Debug\Ex_Campeonato.pdb
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\bin\Debug\Ex_Campeonato.exe.config
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\bin\Debug\Ex_Campeonato.exe
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\bin\Debug\Ex_Campeonato.pdb
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.csprojAssemblyReference.cache
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.Form1.resources
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.Properties.Resources.resources
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.csproj.GenerateResource.cache
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.csproj.CoreCompileInputs.cache
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.exe
+C:\Users\TiagoPC\Documents\Projects\League\Ex_Campeonato\obj\Debug\Ex_Campeonato.pdb

@@ -60,6 +60,7 @@ namespace Ex_Campeonato
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstWeekGames = new System.Windows.Forms.ListBox();
+            this.WeekGamesContainer = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@ namespace Ex_Campeonato
             this.btnWeek3.TabIndex = 3;
             this.btnWeek3.Text = "Week 3";
             this.btnWeek3.UseVisualStyleBackColor = true;
+            this.btnWeek3.Click += new System.EventHandler(this.btnWeek3_Click);
             // 
             // btnWeek4
             // 
@@ -108,6 +110,7 @@ namespace Ex_Campeonato
             this.btnWeek4.TabIndex = 4;
             this.btnWeek4.Text = "Week 4";
             this.btnWeek4.UseVisualStyleBackColor = true;
+            this.btnWeek4.Click += new System.EventHandler(this.btnWeek4_Click);
             // 
             // btnWeek5
             // 
@@ -225,6 +228,7 @@ namespace Ex_Campeonato
             this.btnWeek17.TabIndex = 17;
             this.btnWeek17.Text = "Week 17";
             this.btnWeek17.UseVisualStyleBackColor = true;
+            this.btnWeek17.Click += new System.EventHandler(this.btnWeek17_Click);
             // 
             // btnWeek18
             // 
@@ -234,6 +238,7 @@ namespace Ex_Campeonato
             this.btnWeek18.TabIndex = 18;
             this.btnWeek18.Text = "Week 18";
             this.btnWeek18.UseVisualStyleBackColor = true;
+            this.btnWeek18.Click += new System.EventHandler(this.btnWeek18_Click);
             // 
             // btnWeek19
             // 
@@ -344,11 +349,19 @@ namespace Ex_Campeonato
             this.lstWeekGames.Size = new System.Drawing.Size(346, 342);
             this.lstWeekGames.TabIndex = 30;
             // 
+            // WeekGamesContainer
+            // 
+            this.WeekGamesContainer.Location = new System.Drawing.Point(12, 41);
+            this.WeekGamesContainer.Name = "WeekGamesContainer";
+            this.WeekGamesContainer.Size = new System.Drawing.Size(724, 214);
+            this.WeekGamesContainer.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 643);
+            this.Controls.Add(this.WeekGamesContainer);
             this.Controls.Add(this.lstWeekGames);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -422,6 +435,7 @@ namespace Ex_Campeonato
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstWeekGames;
+        private System.Windows.Forms.FlowLayoutPanel WeekGamesContainer;
     }
 }
 

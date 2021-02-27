@@ -27,6 +27,8 @@ namespace Ex_Campeonato
             return weekMatch;
         }
 
+        public int GetNumberOfGameWeeks() =>  (Clubes.Count - 1)*2;
+
         public void SetTeams(List<Clube> Clubes)
         {
             this.Clubes = Clubes;
@@ -35,28 +37,44 @@ namespace Ex_Campeonato
         public void GenerateAllMatchWeek()
         {
             int matchWeekNumber = 1;
-            var rand = new Random();
-            int totalCiclo = Clubes.Count / 2;
-
-            for (int i = 0; i < 2; i++)
+            int halfLeague = Clubes.Count / 2;
+            List<Clube> potClubes = Clubes.ToList();
+            for (int i = 0; i < Clubes.Count - 1; i++)
             {
-                List<Clube> potClubes = Clubes.ToList();
-
-                for (int j = 0; j < totalCiclo; j++)
+                for (int j = 0; j < halfLeague; j++)
                 {
-                    int randClube = rand.Next(0, potClubes.Count);
-                    Clube homeTeam = potClubes[randClube];
-                    potClubes.Remove(homeTeam);
 
-                    randClube = rand.Next(0, potClubes.Count);
-                    Clube awayTeam = potClubes[randClube];
-                    potClubes.Remove(awayTeam);
-
-                    Match match = new Match(homeTeam, awayTeam, matchWeekNumber);
+                    Match match = new Match(potClubes[j], potClubes[Clubes.Count-1 - j], matchWeekNumber);
                     weekMatches.Add(match);
                 }
+                potClubes = RotatePot(potClubes);
                 matchWeekNumber += 1;
             }
+
+            //Segunda metade do campeonato
+            int numberOfMatchesSoFar = weekMatches.Count;
+            for (int i = 0; i < numberOfMatchesSoFar ; i++)
+            {   
+                Match match = new Match(weekMatches[i].awayTeam, weekMatches[i].homeTeam, weekMatches[i].weekMatch + (GetNumberOfGameWeeks() / 2));
+                weekMatches.Add(match);
+            }
+        }
+
+        private List<Clube> RotatePot(List<Clube> Clubes)
+        {
+            List<Clube> rotatedList = new List<Clube>();
+            rotatedList.Add(Clubes[0]);
+            for (int i = 0; i < Clubes.Count  - 1; i++)
+            {
+                if (i == 0)
+                {
+                    rotatedList.Add(Clubes[Clubes.Count - 1]);
+                    continue;
+                }
+
+                    rotatedList.Add(Clubes[i]);
+            }
+            return rotatedList;
         }
     }
 }

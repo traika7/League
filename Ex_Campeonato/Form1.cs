@@ -13,6 +13,7 @@ namespace Ex_Campeonato
     public partial class Form1 : Form
     {
         Championship championship = new Championship();
+        
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Ex_Campeonato
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
             List<Clube> clubes = new List<Clube>
             {
                 new Clube("Sporting"),
@@ -44,6 +45,28 @@ namespace Ex_Campeonato
             };
             championship.SetTeams(clubes);
             championship.GenerateAllMatchWeek();
+            GenerateButtons();
+        }
+
+        private void GenerateButtons()
+        {
+            int numberOfGameWeeks = championship.GetNumberOfGameWeeks();
+            for (int i = 0; i < numberOfGameWeeks; i++)
+            {
+                Button btn = new Button();
+                btn.Tag = i;
+                btn.Click += (sender, EventArgs)=> { populateWeekList(int.Parse(btn.Tag.ToString()) + 1); };
+                btn.Text = "Week nº " + (i + 1);
+                if (i< numberOfGameWeeks/2)
+                {
+                    btn.BackColor = Color.FromArgb(255, 255, 204);
+                }
+                else
+                {
+                    btn.BackColor = Color.FromArgb(255, 153, 255);
+                }
+                WeekGamesContainer.Controls.Add(btn);
+            }
         }
 
         private void populateWeekList(int weekNumber)
@@ -65,6 +88,26 @@ namespace Ex_Campeonato
         private void btnWeek2_Click(object sender, EventArgs e)
         {
             populateWeekList(2);
+        }
+
+        private void btnWeek3_Click(object sender, EventArgs e)
+        {
+            populateWeekList(3);
+        }
+
+        private void btnWeek4_Click(object sender, EventArgs e)
+        {
+            populateWeekList(4);
+        }
+
+        private void btnWeek17_Click(object sender, EventArgs e)
+        {
+            populateWeekList(17);
+        }
+
+        private void btnWeek18_Click(object sender, EventArgs e)
+        {
+            populateWeekList(18);
         }
     }
 }
